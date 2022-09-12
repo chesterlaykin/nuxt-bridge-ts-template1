@@ -33,7 +33,9 @@ Command:
 
 yarn add --dev @nuxt/bridge@npm:@nuxt/bridge-edge
 
-Current version: `3.0.0-27711990.d463650`
+Current nuxt-bridge version: `3.0.0-27711990.d463650`
+
+Nuxt: v3.0.0-rc.8
 
 ### **package.json change**
 

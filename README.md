@@ -10,7 +10,7 @@ Nuxt2-ts-storybook : template 1
       - [Typescript fixes](#typescript-fixes)
       - [Run command:](#run-command)
       - [Add package](#add-package)
-  - [**Typescript**](#typescript)
+  - [**Non working dependencies**](#non-working-dependencies)
     - [nuxt-property-decorator](#nuxt-property-decorator)
   - [**Vite**](#vite)
     - [**Upgrade postcss-preset-env to v7**](#upgrade-postcss-preset-env-to-v7)
@@ -67,29 +67,26 @@ Removed `@nuxt/typescript-build`:  and remove from from **buildModules** (config
 Added `.output` to the .gitignore file.
 
 #### Run command:
+
 **npx nuxi prepare** (generate .nuxt/tsconfig.json )
 
 #### Add package
+
 std-env (fix std-env error)
 
-## **Typescript**
+## **Non working dependencies**
 
 ### nuxt-property-decorator
 
-To use with class based components.
-Compatibility:
-
-Latest working: @nuxt/bridge-edge 3.0.0-27690335.da95eff
-
-Latest tested non-working: @nuxt/bridge-edge@3.0.0-27611430.cf4761a
+Doesn't work. (sep 2022)
 
 ## **Vite**
 
 Enabled in nuxt.config
+
 ### **Upgrade postcss-preset-env to v7**
 
 Upgrade postcss-preset-env to v7 due to warning from Vite.
-
 
 ## **SASS**
 

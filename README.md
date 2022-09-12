@@ -31,7 +31,7 @@ Starter projects with different dependencies and setups, ready to use
 
 Command:
 
-yarn add --dev @nuxt/bridge@npm:@nuxt/bridge-edge
+`yarn add --dev @nuxt/bridge@npm:@nuxt/bridge-edge`
 
 Current nuxt-bridge version: `3.0.0-27711990.d463650`
 

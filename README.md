@@ -1,4 +1,4 @@
-Nuxt2-ts-storybook : template 1
+Nuxt-bridge-ts-template1
 
 - [Installed dependencies + configurations](#installed-dependencies--configurations)
   - [**Nuxt bridge**](#nuxt-bridge)
@@ -8,12 +8,12 @@ Nuxt2-ts-storybook : template 1
       - [Nuxt config](#nuxt-config)
         - [Auto imports](#auto-imports)
       - [Typescript fixes](#typescript-fixes)
-      - [Run command:](#run-command)
+      - [Run command](#run-command)
       - [Add package](#add-package)
-  - [**Non working dependencies**](#non-working-dependencies)
     - [nuxt-property-decorator](#nuxt-property-decorator)
+      - [This package needs to be transpiled](#this-package-needs-to-be-transpiled)
   - [**Vite**](#vite)
-    - [**Upgrade postcss-preset-env to v7**](#upgrade-postcss-preset-env-to-v7)
+    - [**Upgrade postcss-preset-env to v7, and postcss to v8**](#upgrade-postcss-preset-env-to-v7-and-postcss-to-v8)
   - [**SASS**](#sass)
     - [**Sass**](#sass-1)
     - [**@nuxtjs/style-resources**](#nuxtjsstyle-resources)
@@ -29,7 +29,8 @@ Starter projects with different dependencies and setups, ready to use
 
 ### @nuxt/bridge-edge
 
-Command:
+Commands:
+`yarn add nuxt-edge`
 
 `yarn add --dev @nuxt/bridge@npm:@nuxt/bridge-edge`
 
@@ -66,7 +67,9 @@ Removed `@nuxt/typescript-build`:  and remove from from **buildModules** (config
 
 Added `.output` to the .gitignore file.
 
-#### Run command:
+Add to nuxt config: `"extends": "./.nuxt/tsconfig.json",`
+
+#### Run command
 
 **npx nuxi prepare** (generate .nuxt/tsconfig.json )
 
@@ -74,19 +77,29 @@ Added `.output` to the .gitignore file.
 
 std-env (fix std-env error)
 
-## **Non working dependencies**
-
 ### nuxt-property-decorator
 
-Doesn't work. (sep 2022)
+yarn add nuxt-property-decorator
+
+#### This package needs to be transpiled
+
+Add to nuxt config:
+
+```code
+build: {
+  transpile: ["nuxt-property-decorator", "vue-class-component"]
+}
+```
 
 ## **Vite**
 
 Enabled in nuxt.config
 
-### **Upgrade postcss-preset-env to v7**
+### **Upgrade postcss-preset-env to v7, and postcss to v8**
 
 Upgrade postcss-preset-env to v7 due to warning from Vite.
+
+This in turn requires upgrade to postcss v8.
 
 ## **SASS**
 

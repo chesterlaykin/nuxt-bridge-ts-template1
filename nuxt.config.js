@@ -2,8 +2,11 @@ import { defineNuxtConfig } from '@nuxt/bridge'
 
 export default defineNuxtConfig({
   // Global page headers: https://go.nuxtjs.dev/config-head
+  bridge: {
+    vite: true
+  },
   head: {
-    title: 'nuxt-bridge-init1',
+    title: 'nuxt-bridge-ts-template1',
     htmlAttrs: {
       lang: 'en'
     },
@@ -40,5 +43,6 @@ export default defineNuxtConfig({
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
+    transpile: ["nuxt-property-decorator", "vue-class-component"]
   }
 })
